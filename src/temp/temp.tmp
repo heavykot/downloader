@@ -1,0 +1,6 @@
+// загрузка файла
+        URL website = new URL("http://www.bizpark18.ru/java/atoi.mp3");
+        ReadableByteChannel rbc = Channels.newChannel(website.openStream());
+        FileOutputStream fos = new FileOutputStream("A Toi.mp3");
+        fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+
